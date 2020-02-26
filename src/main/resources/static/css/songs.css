@@ -1,0 +1,9 @@
+.featured-songs .card{
+    height: 100%;
+   
+}
+.featured-songs .card img{
+    height: 251px;
+    width: 253px;
+    object-fit: cover;
+}
