@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Song {
@@ -15,7 +16,10 @@ public class Song {
     private String nombre;
     private String descripcion;
     private String imagenUrl;
-
+    
+    @ManyToOne
+    private Discografica discografica;
+    
     public String getNombre() {
         return nombre;
     }
@@ -47,6 +51,15 @@ public class Song {
     public void setId(Integer id) {
         this.id = id;
     }
+
+    public Discografica getDiscografica() {
+        return discografica;
+    }
+
+    public void setDiscografica(Discografica discografica) {
+        this.discografica = discografica;
+    }
+
     
     
 }

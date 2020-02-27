@@ -25,6 +25,7 @@
                         <img th:src="${song.imagenUrl}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 th:text="${song.nombre}" class="card-title"></h5>
+                            <span class="badge badge-pill badge-warning" th:text="${song.discografica.nombre}"></span>
                             <p th:text="${song.descripcion}" class="card-text"></p>
                         </div>
                         <div class="card-footer text-muted">
