@@ -15,6 +15,6 @@ public class SongService {
     }
     
     public List<Song> findFeaturedSongs(){
-        return repository.findAll();
+        return repository.buscarTodos();
     }
 }
