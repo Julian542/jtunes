@@ -17,4 +17,8 @@ public class SongService {
     public List<Song> findFeaturedSongs(){
         return repository.buscarTodos();
     }
+    
+    public List<Song> buscarPorDiscografica(int discograficaId){
+        return repository.buscarPorDiscografica(discograficaId);
+    }
 }

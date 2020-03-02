@@ -22,4 +22,11 @@ public class ListadoController {
         model.addAttribute("featuredSongs", featuredSongs);
         return "listado";
     }
+    
+    @RequestMapping("/songsbyLabel")
+    public String listarPorDiscografica(int discograficaId, Model model){
+        List <Song> songs = songService.buscarPorDiscografica(discograficaId);
+        model.addAttribute("featuredSongs",songs);
+        return "listado";
+    }
 }

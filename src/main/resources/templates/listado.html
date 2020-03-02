@@ -13,7 +13,7 @@
     </head>
     <body>
         <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="img/iconox.png" alt="icono">
                 JTunes
             </a>
@@ -25,7 +25,7 @@
                         <img th:src="${song.imagenUrl}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 th:text="${song.nombre}" class="card-title"></h5>
-                            <span class="badge badge-pill badge-warning" th:text="${song.discografica.nombre}"></span>
+                            <a th:href="@{/songsbyLabel(discograficaId=${song.discografica.id})}" class="badge badge-pill badge-warning" th:text="${song.discografica.nombre}"></a>
                             <p th:text="${song.descripcion}" class="card-text"></p>
                         </div>
                         <div class="card-footer text-muted">

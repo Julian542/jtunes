@@ -13,5 +13,6 @@ public interface SongRepository extends JpaRepository<Song, Integer>{
     @Query(value = "select * from song order by nombre", nativeQuery = true)
     List<Song> buscarTodos();
     
-    
+    @Query("from Song s where s.discografica.id = ?1 order by s.nombre")
+    List<Song> buscarPorDiscografica(int discograficaId);
 }
