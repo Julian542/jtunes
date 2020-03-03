@@ -21,4 +21,8 @@ public class SongService {
     public List<Song> buscarPorDiscografica(int discograficaId){
         return repository.buscarPorDiscografica(discograficaId);
     }
+    
+    public List<Song> buscarPorNombre(String consulta){
+        return repository.buscarPorNombre(consulta);
+    }
 }

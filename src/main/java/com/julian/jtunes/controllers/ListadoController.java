@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ListadoController {
@@ -27,6 +28,13 @@ public class ListadoController {
     public String listarPorDiscografica(int discograficaId, Model model){
         List <Song> songs = songService.buscarPorDiscografica(discograficaId);
         model.addAttribute("featuredSongs",songs);
+        return "listado";
+    }
+    
+    @RequestMapping("/search")
+    public String listarPorNombre(@RequestParam("q") String name, Model model){
+        List <Song> songs = songService.buscarPorNombre(name);
+        model.addAttribute("featuredSongs", songs);
         return "listado";
     }
 }
