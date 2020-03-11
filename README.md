@@ -17,3 +17,4 @@ Simplemente una store de canciones al estilo ITunes hecha para estudiar Spring
 * Thymeleaf
 * Spring Boot DevTools
 * HyperSQL Database (h2)
+* MySQL Driver
