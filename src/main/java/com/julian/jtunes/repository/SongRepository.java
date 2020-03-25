@@ -16,7 +16,7 @@ public interface SongRepository extends JpaRepository<Song, Integer>{
     @Query("from Song s where s.discografica.id = ?1 order by s.nombre")
     List<Song> buscarPorDiscografica(int discograficaId);
     
-    @Query("from Song s where s.nombre like %?1%")
+    @Query("from Song s where s.nombre like %?1% or s.descripcion like %?1% ")
     List<Song> buscarPorNombre(String consulta);
     //otra forma alternativa es con la nomenclatura que reconcoe Spring Data jpa omitiendo el query
     //Spring data lo parsea automaticamente generando el query
